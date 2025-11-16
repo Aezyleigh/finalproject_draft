@@ -1,0 +1,141 @@
+/* ================================
+   Global Styles for The Demigod Archives
+   This file is linked to ALL pages
+   ================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Neuton&family=Source+Sans+Pro&display=swap');
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Source Sans Pro', sans-serif; /* Content font */
+  background-color: #FFF7DD; /* Warm parchment background */
+  color: #2C3E50; /* Deep navy for text */
+  line-height: 1.6;
+}
+
+/* Header and navigation bar */
+header {
+  background-color: #80A1BA; /* Sea blue */
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'IM Fell English', serif; /* Important titles */
+  color: #FFF7DD;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #2C3E50;
+  font-family: 'Neuton', serif; /* Headings font */
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #1A5276; /* Rich blue hover */
+}
+
+/* Main content area */
+main {
+  padding: 2rem;
+}
+
+/* Footer styling */
+footer {
+  background-color: #91C4C3; /* Seafoam */
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #2C3E50;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Grid layout for cabins, characters, quests */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card format for cabins/characters/quests */
+.card {
+  background-color: #B4DEBD; /* Mint green accent */
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card h3 {
+  font-family: 'Neuton', serif;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #4A6572; /* Slate gray for captions */
+}
+
+/* Form styling (About page) */
+form {
+  background-color: #B4DEBD;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+form label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 1rem;
+  background-color: #80A1BA;
+  color: #FFF7DD;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #1A5276;
+}
