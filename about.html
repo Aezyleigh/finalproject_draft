@@ -3,75 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Demigod ArchivesX - About Author</title>
+  <title>The Demigod Archives | About the Author</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Neuton&family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <header>
-    <h1>About the Author</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cabins.html">The Cabins</a></li>
-        <li><a href="characters.html">The Characters</a></li>
-        <li><a href="quests.html">Quest Log</a></li>
-        <li><a href="about.html" class="active">About Author</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>THE DEMIGOD ARCHIVES</h1>
+      <p>Home of the Demigods • Est. June 28, 2005</p>
+    </div>
   </header>
 
-  <main>
-    <!-- Author section -->
-    <section>
-      <img src="local-or-external.jpg" alt="Rick Riordan">
-      <h2>Rick Riordan</h2>
-      <p>[Insert author details here: full name, birth date, occupation, inspiration, teaching background, socials]</p>
-    </section>
+  <nav>
+    <div class="container">
+      <a href="index.html">Home</a>
+      <a href="cabins.html">The Cabins</a>
+      <a href="characters.html">The Characters</a>
+      <a href="quests.html">Quest Log</a>
+      <a href="about.html" class="active">About Author</a>
+    </div>
+  </nav>
 
-    <!-- Contact Form -->
-    <form>
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name">
+  <div class="container">
+    <div class="page-header">
+      <h2>About the Author</h2>
+      <p>Learn about the uncle of the demigods and get a chance to know your godly parent!</p>
+    </div>
 
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email">
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message"></textarea>
-
-      <button type="submit">Send</button>
-    </form>
-
-    <!-- Fan Sites -->
-    <section>
-      <h3>Fan Sites & Official Pages</h3>
-      <ul>
-        <li><a href="https://official-fanpage-link.com">Official Fan Page</a></li>
-        <li><a href="https://fan-site-link.com">Fan Site 1</a></li>
-        <li><a href="https://fan-site-link.com">Fan Site 2</a></li>
-      </ul>
-    </section>
-
-    <!-- Fun Survey -->
-    <section>
-      <h3>Who is your godly parent?</h3>
-      <form>
-        <label for="parent">Choose:</label>
-        <select id="parent" name="parent">
-          <option>Zeus</option>
-          <option>Poseidon</option>
-          <option>Athena</option>
-          <option>Apollo</option>
-          <option>Artemis</option>
-          <!-- Add more gods -->
-        </select>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  </main>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-header"><h3>Author's Photo</h3></div>
+        <div class="card-image">
+          <picture>
+            <source srcset="images/author.webp" type="image/webp">
+            <source srcset="images/author.jpg" type="image/jpeg">
+            <img src="https://your-repo-link/author.jpg" alt="Author">
+          </picture>
+        </div>
+        <div class="card-content"><p>Description</p></div>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    © 2025 The Demigod Archives
+    <div class="container">
+      <p>The Demigod Archives • Camp Half-Blood, Long Island, New York</p>
+      <p>For demigod eyes only. Mortals will see only a strawberry farm.</p>
+      <p>© 2025 The Demigod Archives. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
