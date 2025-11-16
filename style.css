@@ -1,149 +1,277 @@
-/* ================================
-   Global Styles for The Demigod Archives
-   This file is linked to ALL pages
-   ================================ */
+/* ===========================
+   Root Variables (Colors & Fonts)
+   =========================== */
+:root {
+  --sea-blue: #80A1BA;
+  --seafoam: #91C4C3;
+  --mint: #B4DEBD;
+  --parchment: #FFF7DD;
+  --text-dark: #2C3E50;
+  --text-light: #FFF7DD;
+}
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Neuton&family=Source+Sans+Pro&display=swap');
-
-/* Reset some default browser styles */
+/* ===========================
+   Global Reset & Body
+   =========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body styling */
 body {
-  font-family: 'Source Sans Pro', sans-serif; /* Content font */
-  background-color: #FFF7DD; /* Warm parchment background */
-  color: #2C3E50; /* Deep navy for text */
+  background-color: var(--parchment);
+  font-family: 'Neuton', serif;
+  color: var(--text-dark);
   line-height: 1.6;
 }
 
-/* Header and navigation bar */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   Header
+   =========================== */
 header {
-  background-color: #80A1BA; /* Sea blue */
-  padding: 1rem;
+  background: linear-gradient(135deg, var(--sea-blue), var(--seafoam));
+  color: var(--text-light);
+  padding: 1rem 0;
   text-align: center;
 }
 
 header h1 {
-  font-family: 'IM Fell English', serif; /* Important titles */
-  color: #FFF7DD;
-}
-
-nav {
-  margin-top: 0.5rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #2C3E50;
-  font-family: 'Neuton', serif; /* Headings font */
-  font-weight: bold;
-}
-
-/* Highlight the active page link */
-nav ul li a.active {
-  border: 2px solid #1A5276;   /* Rich blue border */
-  padding: 0.3rem 0.6rem;      /* Space inside the box */
-  border-radius: 5px;          /* Rounded corners */
-  background-color: #FFF7DD;   /* Light background */
-}
-
-nav ul li a:hover {
-  color: #1A5276; /* Rich blue hover */
-}
-
-/* Main content area */
-main {
-  padding: 2rem;
-}
-
-/* Footer styling */
-footer {
-  background-color: #91C4C3; /* Seafoam */
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #2C3E50;
-}
-
-/* Responsive images */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-/* Grid layout for cabins, characters, quests */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Card format for cabins/characters/quests */
-.card {
-  background-color: #B4DEBD; /* Mint green accent */
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.card h3 {
-  font-family: 'Neuton', serif;
+  font-family: 'IM Fell English', serif;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
-.card p {
-  color: #4A6572; /* Slate gray for captions */
+/* ===========================
+   Navigation
+   =========================== */
+nav {
+  background: var(--sea-blue);
+  padding: 1rem 0;
+  text-align: center;
 }
 
-/* Form styling (About page) */
-form {
-  background-color: #B4DEBD;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 2rem;
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-form label {
-  display: block;
-  margin-top: 0.5rem;
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s;
 }
 
-form input, form textarea, form select {
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Highlight active page */
+nav a.active {
+  border: 2px solid var(--text-light);
+  background: rgba(255,255,255,0.2);
+}
+
+/* ===========================
+   Hero Section (Home Page)
+   =========================== */
+.hero {
+  text-align: center;
+  padding: 3rem 0 2rem 0;
+  background: linear-gradient(rgba(255,247,221,0.9), rgba(255,247,221,0.9));
+}
+
+.hero h2 {
+  font-family: 'IM Fell English', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+
+/* ===========================
+   Camp Map (Home Page)
+   =========================== */
+.camp-map-section {
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.camp-map {
+  height: 500px;
+  background: var(--mint);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.camp-map img {
   width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-form button {
-  margin-top: 1rem;
-  background-color: #80A1BA;
-  color: #FFF7DD;
-  border: none;
-  padding: 0.7rem 1.2rem;
-  cursor: pointer;
-  border-radius: 5px;
+/* ===========================
+   Quote Section
+   =========================== */
+.section {
+  background: white;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-form button:hover {
-  background-color: #1A5276;
+.quote {
+  background: var(--mint);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* ===========================
+   Chiron Message (Home Page)
+   =========================== */
+.chiron-detailed {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+.chiron-image {
+  background: var(--seafoam);
+  border-radius: 8px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chiron-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.chiron-message {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   Page Headers (Cabins, Characters, Quests, About)
+   =========================== */
+.page-header {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.page-header h2 {
+  font-family: 'IM Fell English', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   Cards Grid (Cabins, Characters, Quests, About)
+   =========================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--sea-blue), var(--seafoam));
+  color: var(--text-light);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-header h3 {
+  font-family: 'IM Fell English', serif;
+}
+
+.card-image {
+  height: 200px;
+  background: var(--mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+  background: var(--sea-blue);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  .hero h2, .page-header h2 { font-size: 2rem; }
+  .camp-map { height: 350px; }
+  .chiron-detailed { grid-template-columns: 1fr; }
+  .chiron-image { height: 250px; }
+  .cards-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .camp-map { height: 250px; }
+  .hero { padding: 2rem 0 1rem 0; }
 }
